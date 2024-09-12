@@ -47,7 +47,7 @@ function TodoList() {
 
             <List sx={{ width: "100%" }}>
                 {tasksArr.map((task) => (
-                    <ListItem>
+                    <ListItem key={crypto.randomUUID()}>
                         <ChevronRightIcon />
                         <ListItemText primary={task.text} />
                         <IconButton
