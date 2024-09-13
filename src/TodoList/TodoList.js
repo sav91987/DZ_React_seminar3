@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-/* import FolderList from "./FolderList"; */
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -28,7 +27,7 @@ function TodoList() {
     };
 
     const removeTask = (id) => {
-        const deletedTaskArray = tasksArr.filter((mess) => mess.id !== id);
+        const deletedTaskArray = tasksArr.filter(task => task.id !== id);
         setTasksArr(deletedTaskArray);
     };
 
@@ -47,7 +46,7 @@ function TodoList() {
 
             <List sx={{ width: "100%" }}>
                 {tasksArr.map((task) => (
-                    <ListItem key={crypto.randomUUID()}>
+                    <ListItem key={task.id}>
                         <ChevronRightIcon />
                         <ListItemText primary={task.text} />
                         <IconButton

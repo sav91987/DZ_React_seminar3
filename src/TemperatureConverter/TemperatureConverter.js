@@ -19,8 +19,8 @@ function TemperatureConverter() {
 
     const convertValueToCelsium = () => {
         setConvertedValueFahrenheit((convertedValueFahrenheit) =>
-            Math.round((valueCelsium * 9) / 5 + 32)
-        );
+       ((valueCelsium * 9) / 5 + 32).toFixed(2));
+        
     };
 
     const updateValueFahrenheit = (e) => {
@@ -29,8 +29,8 @@ function TemperatureConverter() {
 
     const convertValueToFahrenheit = () => {
         setConvertetValueCelsium((convertedValueCelsium) =>
-            Math.round(((valueFahrenheit - 32) * 5) / 9)
-        );
+            (((valueFahrenheit - 32) * 5) / 9).toFixed(2));
+        ;
     };
 
     return (
